@@ -21,3 +21,11 @@
 .animation {
     animation: backgroundScroll 20s linear infinite
 }
+
+.car {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    top: 70%;
+    transform: translate(-50%, 0);
+}
