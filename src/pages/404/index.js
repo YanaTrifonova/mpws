@@ -6,7 +6,7 @@ export default function PageNotFound() {
     return(
         <div>
             <h1>Page not found</h1>
-            <img src={errorImg} className="img" alt="Error image"/>
+            <img src={errorImg} className="img" alt="Computer with error message on the screen"/>
         </div>
     )
 }
