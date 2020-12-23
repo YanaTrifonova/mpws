@@ -1,5 +1,5 @@
 #background {
-    background: url('../../images/backgrounds/normal.jpg') repeat-x;
+    background: url('../../images/backgrounds/normal.jpg') repeat-x center;
     background-size: cover;
     height: 100vh;
 
@@ -24,8 +24,8 @@
 
 .car {
     position: absolute;
-    height: 100px;
+    height: 10%;
     width: auto;
-    top: 70%;
+    top: 65%;
     transform: translate(-50%, 0);
 }

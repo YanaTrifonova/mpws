@@ -51,7 +51,6 @@ export default function Main() {
                 setCar(carList[carIndex]);
             }
         }
-
     }
 
     useEffect(() => {
