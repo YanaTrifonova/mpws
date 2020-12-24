@@ -2,7 +2,6 @@
     background: url('../../images/backgrounds/normal.jpg') repeat-x center;
     background-size: cover;
     height: 100vh;
-
 }
 
 @keyframes backgroundScroll {
@@ -19,7 +18,7 @@
 }
 
 .animation {
-    animation: backgroundScroll 20s linear infinite
+    animation: backgroundScroll 13s linear infinite
 }
 
 .car {
@@ -28,4 +27,24 @@
     width: auto;
     top: 65%;
     transform: translate(-50%, 0);
+}
+
+.building {
+    position: absolute;
+    bottom: 23%;
+    width: 10%;
+    right: 0;
+}
+
+@keyframes buildingScroll {
+    from {
+        right: 0;
+    }
+    to {
+        right: 6500px;
+    }
+}
+
+.animation-building {
+    animation: buildingScroll 13s linear
 }
