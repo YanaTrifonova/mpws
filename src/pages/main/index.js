@@ -11,6 +11,16 @@ import building1 from "../../images/buildings/building_1.png";
 import building2 from "../../images/buildings/building_2.png";
 import building3 from "../../images/buildings/building_3.png";
 import building4 from "../../images/buildings/building_4.png";
+import building5 from "../../images/buildings/building_5.png";
+import building6 from "../../images/buildings/building_6.png";
+import building7 from "../../images/buildings/building_7.png";
+import building8 from "../../images/buildings/building_8.png";
+import building9 from "../../images/buildings/building_9.png";
+import building10 from "../../images/buildings/building_10.png";
+import building11 from "../../images/buildings/building_11.png";
+import building12 from "../../images/buildings/building_12.png";
+import building13 from "../../images/buildings/building_13.png";
+import building14 from "../../images/buildings/building_14.png";
 
 import "./index.css"
 
@@ -19,7 +29,23 @@ export default function Main() {
     const [currentCarIndex, setCurrentCarIndex] = useState(0);
     const carList = [car0, car1, car2, car3, car4];
 
-    const buildingList = [building0, building1, building2, building3, building4];
+    const buildingList = [
+        building0,
+        building1,
+        building2,
+        building3,
+        building4,
+        building5,
+        building6,
+        building7,
+        building8,
+        building9,
+        building10,
+        building11,
+        building12,
+        building13,
+        building14
+    ];
 
     let myFlag = true;
     let interval;
@@ -27,6 +53,8 @@ export default function Main() {
     let interval3;
     let interval4;
     let interval5;
+
+    let buildingPresetRemoved = false;
 
     function handleRightArrowDown(e) {
         if (e.key === "ArrowRight") {
@@ -52,6 +80,11 @@ export default function Main() {
     function setIntervalForAddingBuildings(buildingNumber, timeout) {
         return setInterval(() => {
             addBuildings(buildingNumber);
+
+            //remove preset buildings
+            if (!buildingPresetRemoved) {
+                removeBuildingPreset();
+            }
         }, timeout);
     }
 
@@ -62,11 +95,17 @@ export default function Main() {
 
         //simple randomizer to render building only with 33.(3)% chances
         if (getRandomInt(2) === 0) {
-            const getRandomBuilding = getRandomInt(4);
+            const getRandomBuilding = getRandomInt(15);
 
             buildingContainer.innerHTML +=
                 `<img src=${buildingList[getRandomBuilding]} class="building" alt="building number ${getRandomBuilding}"/>`
         }
+    }
+
+    function removeBuildingPreset() {
+        const buildingPresetContainer = document.getElementById("building0");
+        buildingPresetContainer.innerHTML = '';
+        buildingPresetRemoved = true;
     }
 
     function moveBackground() {
@@ -165,7 +204,7 @@ export default function Main() {
                 <div id="building4" className="building-container"/>
                 <div id="building5" className="building-container"/>
 
-                <div className="building-container">
+                <div id="building0" className="building-container">
                     <img id="building-preset1" src={building2} className="building" alt="building preset"/>
                     <img id="building-preset2" src={building3} className="building" alt="building preset"/>
                     <img id="building-preset3" src={building4} className="building" alt="building preset"/>
