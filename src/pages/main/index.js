@@ -72,16 +72,23 @@ export default function Main() {
     function moveBackground() {
         console.log("🚗 💨");
 
-        const backgroundElementStyles = document.getElementById("background").classList;
-        backgroundElementStyles.remove("pause");
-        backgroundElementStyles.add("animation");
+        const backgroundTopStyles = document.getElementById("background-top").classList;
+        backgroundTopStyles.remove("pause");
+        backgroundTopStyles.add("animation");
+
+        const backgroundBottomStyles = document.getElementById("background-bottom").classList;
+        backgroundBottomStyles.remove("pause");
+        backgroundBottomStyles.add("animation");
     }
 
     function stopBackgroundMove() {
         console.log("🚘 ✋");
 
-        const backgroundElementStyles = document.getElementById("background").classList;
-        backgroundElementStyles.add("pause");
+        const backgroundTopStyles = document.getElementById("background-top").classList;
+        backgroundTopStyles.add("pause");
+
+        const backgroundBottomStyles = document.getElementById("background-bottom").classList;
+        backgroundBottomStyles.add("pause");
     }
 
 
@@ -149,14 +156,18 @@ export default function Main() {
     });
 
     return (
-        <div id="main-container" style={{height: "100%"}}>
-            <div id="background"/>
-            <img src={car} className="car" alt="car" onClick={handleCarChange}/>
-            <div id="building1"/>
-            <div id="building2"/>
-            <div id="building3"/>
-            <div id="building4"/>
-            <div id="building5"/>
+        <div id="main-container">
+            <div id="background-top">
+                <img src={car} className="car" alt="car" onClick={handleCarChange}/>
+                <div id="building1" className="building-container"/>
+                <div id="building2" className="building-container"/>
+                <div id="building3" className="building-container"/>
+                <div id="building4" className="building-container"/>
+                <div id="building5" className="building-container"/>
+            </div>
+
+            <div id="background-bottom"/>
+
             {/*<img src={building0} className="building" alt="building"/>*/}
         </div>
     )

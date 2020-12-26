@@ -1,7 +1,16 @@
-#background {
-    background: url('../../images/backgrounds/normal.jpg') repeat-x top/50%;
+#background-top {
+    background: url('../../images/backgrounds/normal-top.png') repeat-x center;
     background-size: cover;
-    height: 100vh;
+    height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#background-bottom {
+    background: url('../../images/backgrounds/normal-bottom.png') repeat-x center;
+    background-size: cover;
+    height: 30vh;
 }
 
 @keyframes backgroundScroll {
@@ -25,14 +34,16 @@
     position: absolute;
     height: 10%;
     width: auto;
-    top: 75%;
-    transform: translate(-50%, 0);
     z-index: 100;
+}
+
+.building-container {
+    display: flex;
+    align-items: flex-end;
 }
 
 .building {
     position: absolute;
-    bottom: 15%;
     width: 10%;
     right: 0;
 }
