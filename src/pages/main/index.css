@@ -1,5 +1,5 @@
 #background {
-    background: url('../../images/backgrounds/normal.jpg') repeat-x center;
+    background: url('../../images/backgrounds/normal.jpg') repeat-x top/50%;
     background-size: cover;
     height: 100vh;
 }
@@ -25,13 +25,14 @@
     position: absolute;
     height: 10%;
     width: auto;
-    top: 65%;
+    top: 75%;
     transform: translate(-50%, 0);
+    z-index: 100;
 }
 
 .building {
     position: absolute;
-    bottom: 23%;
+    bottom: 15%;
     width: 10%;
     right: 0;
 }
