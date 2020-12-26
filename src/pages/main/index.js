@@ -156,7 +156,7 @@ export default function Main() {
     });
 
     return (
-        <div id="main-container">
+        <>
             <div id="background-top">
                 <img src={car} className="car" alt="car" onClick={handleCarChange}/>
                 <div id="building1" className="building-container"/>
@@ -164,11 +164,15 @@ export default function Main() {
                 <div id="building3" className="building-container"/>
                 <div id="building4" className="building-container"/>
                 <div id="building5" className="building-container"/>
+
+                <div className="building-container">
+                    <img id="building-preset1" src={building2} className="building" alt="building preset"/>
+                    <img id="building-preset2" src={building3} className="building" alt="building preset"/>
+                    <img id="building-preset3" src={building4} className="building" alt="building preset"/>
+                </div>
             </div>
 
             <div id="background-bottom"/>
-
-            {/*<img src={building0} className="building" alt="building"/>*/}
-        </div>
+        </>
     )
 }

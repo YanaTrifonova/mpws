@@ -28,7 +28,20 @@
 .building {
     position: absolute;
     width: 10%;
+    height: auto;
     right: 0;
+}
+
+#building-preset1 {
+    margin-right: 100px;
+}
+
+#building-preset2 {
+    margin-right: 350px;
+}
+
+#building-preset3 {
+    margin-right: 500px;
 }
 
 .animation-building {
