@@ -13,23 +13,6 @@
     height: 30vh;
 }
 
-@keyframes backgroundScroll {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -6500px 0;
-    }
-}
-
-.pause {
-    animation-play-state: paused !important;
-}
-
-.animation {
-    animation: backgroundScroll 13s linear infinite
-}
-
 .car {
     position: absolute;
     height: 10%;
@@ -48,6 +31,18 @@
     right: 0;
 }
 
+.animation-building {
+    animation: buildingScroll 13s linear
+}
+
+.pause {
+    animation-play-state: paused !important;
+}
+
+.animation {
+    animation: backgroundScroll 13s linear infinite
+}
+
 @keyframes buildingScroll {
     from {
         right: 0;
@@ -57,6 +52,11 @@
     }
 }
 
-.animation-building {
-    animation: buildingScroll 13s linear
+@keyframes backgroundScroll {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -6500px 0;
+    }
 }
